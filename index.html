@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LexAI — Yerel (offline) Türkçe Adli Belge OCR · UYAP UDF, PDF, tarama · TensorRT</title>
+  <meta name="description" content="LexAI; hukuk/adli belgeleri (UYAP UDF, PDF, görsel, Office) cihazda — buluta veri göndermeden — OCR'layan yerel bir Windows uygulamasıdır. Native C++ TensorRT motoru, dijital + tarama, tablo çıkarma, ABBYY-tarzı yan-yana inceleme, konumlu render. Bilirkişi, avukat ve adli uzmanlar için." />
+  <meta name="keywords" content="adli OCR, yerel OCR, offline OCR, Türkçe OCR, UYAP UDF OCR, PDF OCR, bilirkişi OCR, hukuk belge OCR, tarama OCR, tablo çıkarma OCR, TensorRT OCR, belge inceleme, e-imzalı belge, GilTec, LexAI" />
+  <meta name="author" content="GilTec — Mehmet Gilik" />
+  <link rel="canonical" href="https://lordofthemachines.github.io/lexai/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="LexAI" />
+  <meta property="og:title" content="LexAI — Yerel Türkçe Adli Belge OCR (UYAP UDF, PDF, tarama)" />
+  <meta property="og:description" content="Belgeleri cihazda OCR'la — bulut yok. Native TensorRT, dijital + tarama, tablo çıkarma, yan-yana inceleme. Bilirkişi ve hukukçular için." />
+  <meta property="og:url" content="https://lordofthemachines.github.io/lexai/" />
+  <meta property="og:image" content="https://lordofthemachines.github.io/lexai/assets/mockup.svg" />
+  <meta property="og:locale" content="tr_TR" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LexAI — Yerel Türkçe Adli Belge OCR" />
+  <meta name="twitter:description" content="Belgeleri cihazda OCR'la — bulut yok. TensorRT hızı, tablo çıkarma, yan-yana inceleme." />
+  <meta name="twitter:image" content="https://lordofthemachines.github.io/lexai/assets/mockup.svg" />
+  <meta name="theme-color" content="#2563eb" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <link rel="icon" href="assets/logo.svg" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "LexAI",
+    "applicationCategory": "BusinessApplication",
+    "applicationSubCategory": "Belge OCR / Adli Belge İnceleme",
+    "operatingSystem": "Windows 10, Windows 11",
+    "softwareVersion": "0.9.0",
+    "description": "Hukuk/adli belgeleri (UYAP UDF, PDF, görsel, Office) cihazda — buluta veri göndermeden — OCR'layan yerel Windows uygulaması. Native C++ TensorRT motoru, dijital + tarama OCR, tablo çıkarma, ABBYY-tarzı yan-yana inceleme, konumlu render.",
+    "url": "https://lordofthemachines.github.io/lexai/",
+    "softwareHelp": "https://lordofthemachines.github.io/lexai/#kullanim",
+    "author": { "@type": "Organization", "name": "GilTec", "url": "https://giltec.com.tr", "email": "gilikmehmet@gmail.com" },
+    "image": "https://lordofthemachines.github.io/lexai/assets/mockup.svg",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "TRY", "description": "Deneme sürümü" },
+    "audience": { "@type": "Audience", "audienceType": "Bilirkişiler, avukatlar, hukukçular, adli uzmanlar" },
+    "featureList": [
+      "Yerel (offline) OCR — belgeler cihazdan çıkmaz",
+      "Native C++ TensorRT motoru (GPU)",
+      "Dijital PDF metni OCR'sız + tarama/bozuk sayfa OCR",
+      "UYAP UDF, PDF, görsel ve Office desteği",
+      "Tablo yapısı çıkarma (kenarlıklı + kenarlıksız)",
+      "ABBYY-tarzı yan-yana inceleme + yön/alan düzeltme",
+      "Konumlu render — orijinaline yakın çıktı",
+      "Olası veri-kaybı uyarısı",
+      "Sistem tepsisi ajanı + imzalı otomatik güncelleme",
+      "Türkçe arayüz"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "LexAI nedir?", "acceptedAnswer": { "@type": "Answer", "text": "LexAI; hukuk/adli belgeleri (UYAP UDF, PDF, görsel, Office) cihazda — buluta hiçbir veri göndermeden — OCR'layan yerel bir Windows uygulamasıdır. Dijital PDF'lerde gömülü metni OCR'sız çıkarır; taranmış/bozuk sayfalarda native C++ TensorRT motoruyla OCR yapar." } },
+      { "@type": "Question", "name": "Belgelerim buluta gider mi?", "acceptedAnswer": { "@type": "Answer", "text": "Hayır. Tüm işlem cihazınızda yereldir; belge içeriği dışarı çıkmaz. Yalnızca lisans doğrulama ve güncelleme kontrolü için anonim teknik bilgi (makine kimliği özeti, sürüm) iletilir." } },
+      { "@type": "Question", "name": "UYAP UDF dosyalarını açabilir mi?", "acceptedAnswer": { "@type": "Answer", "text": "Evet. UDF (UYAP) dosyalarının ana metnini ve eklerini (PDF/görsel) işler; her sayfa için dijital mi tarama mı kararını otomatik verir." } },
+      { "@type": "Question", "name": "Hangi donanım gerekir?", "acceptedAnswer": { "@type": "Answer", "text": "Windows 10/11 (64-bit) ve güncel sürücülü bir NVIDIA GPU. İlk açılışta TensorRT motoru GPU'nuza göre bir kez hazırlanır." } },
+      { "@type": "Question", "name": "Kurulum nasıl yapılır?", "acceptedAnswer": { "@type": "Answer", "text": "Tek installer'ı indirip çift tıklarsınız; sözleşmeyi (EULA) kabul edersiniz. Yönetici izni gerekmez — uygulama kişisel kullanıcı klasörüne kurulur. İlk açılışta lisans çevrimiçi doğrulanır." } },
+      { "@type": "Question", "name": "LexAI resmî bir UYAP uygulaması mı?", "acceptedAnswer": { "@type": "Answer", "text": "Hayır. LexAI bağımsız, üçüncü taraf bir uygulamadır; T.C. Adalet Bakanlığı (UYAP) ile resmî bir bağlantısı yoktur. Anılan ürün ve marka adları sahiplerine aittir." } }
+    ]
+  }
+  </script>
+
+  <style>
+    :root{ --blue:#2563eb; --blue-d:#1d4ed8; --green:#15803d; --ink:#15212b; --muted:#5d6b78; --line:#e6ecf0; --bg:#f7fafc; --card:#ffffff; }
+    *{box-sizing:border-box} html{scroll-behavior:smooth}
+    body{margin:0;font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+    a{color:var(--blue);text-decoration:none}
+    .wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+    nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.86);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    nav .wrap{display:flex;align-items:center;gap:14px;height:60px}
+    nav img{width:30px;height:30px}
+    nav .brand{font-weight:800;font-size:18px;letter-spacing:-.3px}
+    nav .brand span{color:var(--blue)}
+    nav .spacer{flex:1}
+    nav a.nl{color:var(--muted);font-weight:600;font-size:14px;margin:0 9px;display:none}
+    @media(min-width:900px){nav a.nl{display:inline}}
+    .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;border-radius:10px;padding:10px 18px;border:1px solid transparent;cursor:pointer;font-size:15px;transition:.15s}
+    .btn.primary{background:var(--blue);color:#fff} .btn.primary:hover{background:var(--blue-d)}
+    .btn.ghost{background:#fff;color:var(--ink);border-color:var(--line)} .btn.ghost:hover{border-color:#c9d4db}
+    header.hero{background:radial-gradient(1200px 480px at 78% -8%,#e7eefc 0,rgba(231,238,252,0) 60%),radial-gradient(900px 420px at 8% 0%,#eaf6ec 0,rgba(234,246,236,0) 55%),var(--bg);padding:60px 0 36px}
+    .hero-grid{display:grid;grid-template-columns:1fr;gap:40px;align-items:center}
+    @media(min-width:880px){.hero-grid{grid-template-columns:1.02fr .98fr}}
+    .pill{display:inline-flex;align-items:center;gap:7px;background:#eaf0fb;color:var(--blue-d);font-weight:700;font-size:13px;padding:6px 13px;border-radius:999px;border:1px solid #d3ddf7}
+    h1{font-size:clamp(31px,4.6vw,49px);line-height:1.08;margin:18px 0 14px;letter-spacing:-1.1px}
+    h1 .g{color:var(--blue)}
+    .lead{font-size:18px;color:#3b4a54;max-width:560px;margin:0 0 24px}
+    .lead,.sub,.duo .c p,.row .txt p,.who .w p,.f p,.faq p,.note,.dl .opt span{text-align:justify;text-justify:inter-word}
+    .cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+    .cta small{color:var(--muted);font-size:12.5px;width:100%}
+    .trust{display:flex;flex-wrap:wrap;gap:16px;margin-top:24px;color:var(--muted);font-size:13.5px;font-weight:600}
+    .trust span{display:inline-flex;align-items:center;gap:7px}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--green)}
+    .hero-art img{width:100%;height:auto;border-radius:14px;display:block;box-shadow:0 12px 34px rgba(23,40,82,.14)}
+    section{padding:54px 0}
+    .eyebrow{color:var(--blue);font-weight:800;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin:0 0 8px}
+    h2{font-size:clamp(24px,3.1vw,32px);margin:0 0 12px;letter-spacing:-.6px}
+    .sub{color:var(--muted);font-size:17px;max-width:680px;margin:0 0 30px}
+    .who{display:grid;grid-template-columns:1fr;gap:16px}
+    @media(min-width:760px){.who{grid-template-columns:repeat(3,1fr)}}
+    .who .w{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+    .who .w .ic{width:40px;height:40px;border-radius:10px;background:#eaf0fb;display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+    .who .w .ic svg{width:21px;height:21px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .who .w b{display:block;font-size:16px;margin-bottom:3px} .who .w p{margin:0;color:var(--muted);font-size:14px}
+    .duo{display:grid;grid-template-columns:1fr;gap:20px}
+    @media(min-width:760px){.duo{grid-template-columns:1fr 1fr}}
+    .duo .c{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px}
+    .duo .c .tag{display:inline-block;font-weight:800;font-size:12px;letter-spacing:.5px;padding:5px 11px;border-radius:999px;margin-bottom:14px}
+    .duo .c.dig .tag{background:#eaf6ec;color:#2c6e30} .duo .c.ocr .tag{background:#eaf0fb;color:var(--blue-d)}
+    .duo .c.mix .tag{background:#fdf0e3;color:#a85d00} .duo .c.udf .tag{background:#eef0fb;color:#3b4aa0}
+    .duo .c h3{margin:0 0 8px;font-size:20px;letter-spacing:-.4px} .duo .c p{margin:0 0 14px;color:#42535e;font-size:15px}
+    .duo .c ul{margin:0;padding-left:18px;color:var(--muted);font-size:14px} .duo .c li{margin:4px 0}
+    .row{display:grid;grid-template-columns:1fr;gap:30px;align-items:center;margin-bottom:46px}
+    .row:last-child{margin-bottom:0}
+    @media(min-width:860px){.row{grid-template-columns:1fr 1fr;gap:46px}.row.rev .txt{order:2}.row.rev .art{order:1}}
+    .row .art img{width:100%;height:auto;display:block;border-radius:14px;border:1px solid var(--line);background:#fff;box-shadow:0 10px 30px rgba(23,40,82,.10)}
+    .row .txt h3{font-size:22px;margin:0 0 10px;letter-spacing:-.4px} .row .txt p{color:#42535e;font-size:15.5px;margin:0 0 14px}
+    .row .txt ul{margin:0;padding:0;list-style:none}
+    .row .txt li{display:flex;gap:10px;align-items:flex-start;margin:9px 0;color:#42535e;font-size:14.5px}
+    .row .txt li svg{flex:none;width:20px;height:20px;stroke:var(--green);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;margin-top:1px}
+    .steps{display:grid;grid-template-columns:1fr;gap:18px;counter-reset:s}
+    @media(min-width:720px){.steps{grid-template-columns:repeat(5,1fr)}}
+    .step{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 18px}
+    .step::before{counter-increment:s;content:counter(s);display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:9px;background:#eaf0fb;color:var(--blue-d);font-weight:800;margin-bottom:12px}
+    .step b{display:block;font-size:15px;margin-bottom:4px} .step p{margin:0;color:var(--muted);font-size:13.5px}
+    .feat{display:grid;grid-template-columns:1fr;gap:16px}
+    @media(min-width:680px){.feat{grid-template-columns:repeat(2,1fr)}}
+    @media(min-width:980px){.feat{grid-template-columns:repeat(3,1fr)}}
+    .f{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+    .f .ic{width:42px;height:42px;border-radius:11px;background:#eaf0fb;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .f .ic svg{width:22px;height:22px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .f h3{margin:0 0 6px;font-size:17px} .f p{margin:0;color:var(--muted);font-size:14.5px}
+    .band{background:linear-gradient(180deg,#0f2c55,#0c2036);color:#dce4f0;border-radius:18px;padding:40px 34px}
+    .band h2{color:#fff}.band .sub{color:#a9b8d2}
+    .seclist{display:grid;grid-template-columns:1fr;gap:14px;margin-top:8px}
+    @media(min-width:720px){.seclist{grid-template-columns:repeat(2,1fr)}}
+    .seclist .it{display:flex;gap:12px;align-items:flex-start}
+    .seclist .it svg{flex:none;width:22px;height:22px;stroke:#7fe39a;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;margin-top:1px}
+    .seclist .it b{color:#fff;display:block;font-size:15px} .seclist .it span{font-size:14px;color:#a9b8d2}
+    .faq details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:0 18px;margin-bottom:12px}
+    .faq summary{cursor:pointer;font-weight:700;font-size:16px;padding:16px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:14px}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{content:"+";color:var(--blue);font-size:22px;font-weight:700} .faq details[open] summary::after{content:"–"}
+    .faq p{margin:0 0 16px;color:#42535e;font-size:15px}
+    .dl{text-align:center;background:radial-gradient(700px 280px at 50% 0,#e7eefc 0,rgba(231,238,252,0) 70%),var(--card);border:1px solid var(--line);border-radius:18px;padding:50px 24px}
+    .dl img{width:64px;height:64px;margin-bottom:14px}
+    .dl .opt{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px;color:var(--muted);font-size:14px}
+    .req{margin-top:14px;color:var(--muted);font-size:13px}
+    .note{margin-top:30px;background:#fbfdff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;color:var(--muted);font-size:13px;line-height:1.5}
+    .note b{color:#42535e}
+    footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:13.5px}
+    footer .wrap{display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between}
+    footer a{color:var(--muted);font-weight:600}
+    .kbd{font-family:Consolas,ui-monospace,monospace;background:#eef3f6;border:1px solid var(--line);border-radius:6px;padding:1px 7px;font-size:13px;color:#33424c}
+    .contact{display:grid;grid-template-columns:1fr;gap:14px;max-width:720px}
+    @media(min-width:600px){.contact{grid-template-columns:1fr 1fr}}
+    .cc{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;transition:.15s}
+    .cc:hover{border-color:#c9d4db;box-shadow:0 6px 20px rgba(23,40,82,.07)}
+    .cc .ic{flex:none;width:44px;height:44px;border-radius:11px;background:#eaf0fb;display:flex;align-items:center;justify-content:center}
+    .cc .ic svg{width:22px;height:22px;stroke:var(--blue);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+    .cc b{display:block;font-size:12px;color:var(--muted);font-weight:800;letter-spacing:.6px} .cc .v{display:block;font-size:15.5px;font-weight:700;color:var(--ink);letter-spacing:.2px}
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="wrap">
+      <img src="assets/logo.svg" alt="LexAI logosu" />
+      <span class="brand">Lex<span>AI</span></span>
+      <span class="spacer"></span>
+      <a class="nl" href="#kimler">Kimler için</a>
+      <a class="nl" href="#nasil">Nasıl çalışır</a>
+      <a class="nl" href="#ozellikler">Özellikler</a>
+      <a class="nl" href="#sss">SSS</a>
+      <a class="nl" href="#iletisim">İletişim</a>
+      <a class="btn primary" href="https://drive.google.com/uc?export=download&id=16VA4ngDw5SGiq6EHNNEYiLUVHTDXqFFo">İndir</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="pill">● Bilirkişi · Avukat · Adli uzman · v0.9.0 beta</span>
+        <h1>Adli belgeleri <span class="g">cihazınızda</span> OCR'layın — bulut yok.</h1>
+        <p class="lead">
+          <b>LexAI</b>, hukuk/adli belgelerinizi (<b>UYAP UDF</b>, PDF, görsel, Office)
+          <b>buluta hiçbir veri göndermeden</b>, cihazınızda OCR'lar. Native C++ <b>TensorRT</b>
+          motoru; temiz dijital metni OCR'sız çıkarır, taramayı OCR'lar, <b>tabloları</b> yapısıyla
+          alır ve <b>yan-yana inceleme</b> ile orijinaline yakın çıktı verir.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="https://drive.google.com/uc?export=download&id=16VA4ngDw5SGiq6EHNNEYiLUVHTDXqFFo">⬇ LexAI v0.9.0 indir (~2.9&nbsp;GB)</a>
+          <a class="btn ghost" href="#kullanim">Nasıl kurulur</a>
+          <small>Windows 10/11 (x64) · NVIDIA GPU gerekir · deneme sürümü</small>
+        </div>
+        <div class="trust">
+          <span><i class="dot"></i> Belgeler cihazdan çıkmaz</span>
+          <span><i class="dot"></i> Native TensorRT hızı</span>
+          <span><i class="dot"></i> Kendini günceller</span>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="assets/mockup.svg" alt="LexAI yan-yana inceleme ekranı — solda orijinal/tespit, sağda konumlu render" />
+      </div>
+    </div>
+  </header>
+
+  <!-- KİMLER İÇİN -->
+  <section id="kimler">
+    <div class="wrap">
+      <p class="eyebrow">Kimler için</p>
+      <h2>Belgeyle çalışan adli profesyoneller için</h2>
+      <p class="sub">Gizlilik kritik, hacim yüksek, biçim karışık — LexAI bu üçünü birden yerelde çözer.</p>
+      <div class="who">
+        <div class="w">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg></div>
+          <b>Bilirkişiler</b>
+          <p>Dava dosyalarındaki yüzlerce sayfayı (UDF + ek PDF/görsel) yerelde OCR'layıp raporlanabilir metne çevirin.</p>
+        </div>
+        <div class="w">
+          <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <b>Avukatlar & hukukçular</b>
+          <p>UYAP UDF, dekont, eksper raporu, poliçe gibi belgeleri arayüzde inceleyip yapısıyla çıkarın.</p>
+        </div>
+        <div class="w">
+          <div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 4v16"/></svg></div>
+          <b>Adli & kurumsal birimler</b>
+          <p>Veri-güvenliği nedeniyle buluta gönderilemeyen evrakı tamamen çevrimdışı işleyin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NASIL ÇALIŞIR / SAYFA TÜRLERİ -->
+  <section id="nasil" style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow">Nasıl çalışır</p>
+      <h2>Her sayfa için doğru yöntem — otomatik</h2>
+      <p class="sub">LexAI her sayfanın dijital mi tarama mı olduğuna kendi karar verir; gereksiz OCR yapmaz, gerekeni yüksek kalitede yapar.</p>
+      <div class="duo">
+        <div class="c dig">
+          <span class="tag">DİJİTAL</span>
+          <h3>Temiz dijital sayfa → OCR'sız</h3>
+          <p>Gömülü metni doğrudan, konumuyla çıkarır (PDF/UDF/Office). OCR hatası riski olmadan, anında.</p>
+          <ul><li>Konumlu bloklar + tablo yapısı</li><li>Bozuk-font/shifted-cmap sezgisi → gerekirse OCR</li></ul>
+        </div>
+        <div class="c ocr">
+          <span class="tag">TARAMA</span>
+          <h3>Taranmış/bozuk sayfa → TensorRT OCR</h3>
+          <p>Native C++ TensorRT motoru; yön düzeltme, yoğun sayfada şerit-tiling ile satır kaybı olmadan.</p>
+          <ul><li>Otomatik yön (90/180/270) düzeltme</li><li>Yüksek çözünürlük + adaptif OCR</li></ul>
+        </div>
+        <div class="c mix">
+          <span class="tag">KARMA</span>
+          <h3>Dijital + gömülü görsel → ikisi birden</h3>
+          <p>Dijital metni korur, sayfadaki gömülü foto/mühür/imzayı OCR'lar; ikisini konumuyla birleştirir.</p>
+          <ul><li>Dijital alan kilitli (üst üste binme yok)</li><li>Gömülü görsel inceleme alanı olur</li></ul>
+        </div>
+        <div class="c udf">
+          <span class="tag">UYAP UDF · OFFICE</span>
+          <h3>UDF, docx/xlsx, görsel</h3>
+          <p>UDF ana metni + ekleri; Office belgeleri; tek tek görseller — hepsi tek akışta.</p>
+          <ul><li>UDF = ana metin (dijital) + ekler (PDF/görsel)</li><li>Tür filtresi ve gruplama</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ZİKZAK ÖZELLİKLER -->
+  <section id="ozellikler" style="padding-top:0">
+    <div class="wrap">
+      <div class="row">
+        <div class="txt">
+          <p class="eyebrow">Yan-yana inceleme</p>
+          <h3>Solda orijinal, sağda render — birebir karşılaştır</h3>
+          <p>Her sayfayı orijinaliyle (tespit kutuları) ve konumlu render'ıyla yan yana görürsünüz; zoom/pan, blok vurgulama, tek-sayfa sığdırma ile her ayrıntıyı denetlersiniz.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Konumlu render — orijinaline yakın, font/hizalı</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Klavye ←/→ + mouse ileri/geri gezinme</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Olası veri-kaybı uyarısı (mürekkep-kaplama)</li>
+          </ul>
+        </div>
+        <div class="art"><img src="assets/mockup.svg" alt="Yan-yana inceleme: orijinal + konumlu render" /></div>
+      </div>
+
+      <div class="row rev">
+        <div class="txt">
+          <p class="eyebrow">ABBYY-tarzı inceleme</p>
+          <h3>Önce kontrol et, sonra OCR yap</h3>
+          <p>İki fazlı akış: önce yön + alanlar (zone) tespit edilir, siz düzeltir/onaylar, sonra OCR çalışır. Zone editörü ile alan ekler, türünü değiştirir, Ctrl+Z/Y ile geri/ileri alırsınız.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Yön (90/180 + serbest açı) + alan düzeltme</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Poligon/metin/tablo/figür/mühür palet</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Oturum kalıcı — kazara kapanışa karşı</li>
+          </ul>
+        </div>
+        <div class="art"><img src="assets/zones.svg" alt="Zone editörü: alan tespiti ve düzeltme" /></div>
+      </div>
+
+      <div class="row">
+        <div class="txt">
+          <p class="eyebrow">Tablo çıkarma</p>
+          <h3>Tabloları yapısıyla — kenarlıklı + kenarlıksız</h3>
+          <p>Banka dekontu, eksper raporu, poliçe gibi tablolu belgelerde hücreleri konumu, fontu ve gölgesiyle yeniden kurar; çizgisiz hizalı tabloları bile metin hizasından yakalar.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Kenarlıklı, dolgulu/gölgeli ve kenarlıksız tablolar</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> Anahtar-değer ve çok-sütun düzenler</li>
+            <li><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg> .md çıktısında tablo yapısı korunur</li>
+          </ul>
+        </div>
+        <div class="art"><img src="assets/table.svg" alt="Tablo çıkarma: konumlu hücreler" /></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KULLANIM -->
+  <section id="kullanim" style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow">Kullanım</p>
+      <h2>İndir, kur, klasörü seç — gerisi akış</h2>
+      <p class="sub">Tek installer; her şey içinde. İlk açılışta TensorRT motoru GPU'nuza göre bir kez hazırlanır.</p>
+      <div class="steps">
+        <div class="step"><b>İndir & kur</b><p>Tek installer'ı çalıştır, sözleşmeyi kabul et — yönetici izni gerekmez.</p></div>
+        <div class="step"><b>Klasörü seç</b><p>Dava dosyaları klasörünü seç (PDF/UDF/görsel/Office).</p></div>
+        <div class="step"><b>Analiz et</b><p>Yön + alanlar tespit edilir; tür filtreleriyle gözden geçirirsin.</p></div>
+        <div class="step"><b>İncele</b><p>Yan yana orijinal/render; gerekirse alan/yön düzelt.</p></div>
+        <div class="step"><b>OCR yap</b><p>Onayla → metin + tablo + .md çıktısı üretilir.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ÖZELLİK IZGARASI -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow">Neden LexAI</p>
+      <h2>Yerel, hızlı, kendini yöneten</h2>
+      <div class="feat">
+        <div class="f"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Gizlilik önce</h3><p>Belgeler cihazdan çıkmaz; işlem tamamen yereldir. Adli delil için tasarlandı.</p></div>
+        <div class="f"><div class="ic"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg></div><h3>TensorRT hızı</h3><p>Native C++ motor; sıcak/kalıcı engine, dijital sayfa OCR'sız.</p></div>
+        <div class="f"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></div><h3>Tablo yapısı</h3><p>Kenarlıklı + kenarlıksız tabloları konumlu hücrelerle çıkarır.</p></div>
+        <div class="f"><div class="ic"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg></div><h3>UYAP UDF + çok biçim</h3><p>UDF, PDF, görsel, Office — tek akış, tür filtresi/gruplama.</p></div>
+        <div class="f"><div class="ic"><svg viewBox="0 0 24 24"><path d="M23 4v6h-6M1 20v-6h6"/><path d="M3.5 9a9 9 0 0 1 14.9-3.4L23 10M1 14l4.6 4.4A9 9 0 0 0 20.5 15"/></svg></div><h3>Otomatik güncelleme</h3><p>Açılışta/tepside yeni sürümü görür; toast verir, doğrulayıp kurar.</p></div>
+        <div class="f"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6v6H9z"/></svg></div><h3>Tepsi ajanı</h3><p>Arka planda tepside bekler; kapatınca motoru bırakır (VRAM boşalır).</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GÜVENLİK -->
+  <section id="guvenlik" style="padding-top:0">
+    <div class="wrap">
+      <div class="band">
+        <p class="eyebrow" style="color:#7fe39a">Güvenlik & gizlilik</p>
+        <h2>Adli delil cihazınızda kalır</h2>
+        <p class="sub">Belge içeriği hiçbir zaman dışarı gönderilmez. Yalnız lisans ve güncelleme için anonim kontrol yapılır.</p>
+        <div class="seclist">
+          <div class="it"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><b>Yerel işleme</b><span>OCR ve inceleme tamamen cihazda; bulut yok.</span></div></div>
+          <div class="it"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><b>Ham OCR korunur</b><span>Çıktıyı bozan otomatik düzeltme yapılmaz (delil bütünlüğü).</span></div></div>
+          <div class="it"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><b>Lisanslı & makineye-bağlı</b><span>Kopya korumalı; çevrimiçi lisans doğrulaması.</span></div></div>
+          <div class="it"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><div><b>İmza-doğrulamalı güncelleme</b><span>İndirilen kurulum SHA-256 ile doğrulanır.</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SSS -->
+  <section id="sss" style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow">Sık sorulanlar</p>
+      <h2>Aklınızdaki sorular</h2>
+      <div class="faq">
+        <details open><summary>Belgelerim buluta gider mi?</summary><p>Hayır. Tüm işlem cihazınızda yereldir; belge içeriği dışarı çıkmaz. Yalnızca lisans doğrulama ve güncelleme kontrolü için anonim teknik bilgi (makine kimliği özeti, sürüm) iletilir.</p></details>
+        <details><summary>Hangi donanım gerekir?</summary><p>Windows 10/11 (64-bit) ve <b>güncel sürücülü bir NVIDIA GPU</b>. İlk açılışta TensorRT motoru GPU'nuza göre bir kez hazırlanır (birkaç dakika). ~6 GB boş disk önerilir.</p></details>
+        <details><summary>UYAP UDF dosyalarını açabilir mi?</summary><p>Evet. UDF (UYAP) dosyalarının ana metnini ve eklerini (PDF/görsel) işler; her sayfa için dijital mi tarama mı kararını otomatik verir.</p></details>
+        <details><summary>Kurulum güvenli mi? "Bilinmeyen yayıncı" diyor.</summary><p>Beta sürüm henüz Authenticode sertifikasıyla imzalı olmadığından Windows SmartScreen uyarı gösterebilir: <b>Daha fazla bilgi → Yine de çalıştır</b>. İndirdiğiniz kurulum, resmî LexAI dağıtım kaynağından gelir.</p></details>
+        <details><summary>Lisans nasıl çalışır?</summary><p>LexAI lisanslı bir deneme sürümüdür; lisans makinenize bağlıdır (kopyalanamaz). İlk açılışta çevrimiçi doğrulanır (internet gerekir). Lisansınız yoksa/deneme dolmuşsa uygulama size bir <span class="kbd">LEXAI-XXXX-XXXX</span> kodu gösterir — bu kodu bize iletin.</p></details>
+        <details><summary>LexAI resmî bir UYAP uygulaması mı?</summary><p>Hayır. LexAI bağımsız, üçüncü taraf bir uygulamadır; T.C. Adalet Bakanlığı (UYAP) ile resmî bir bağlantısı yoktur. "UYAP", "UDF" ve anılan diğer ürün/marka adları sahiplerine aittir.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- İNDİR -->
+  <section style="padding-top:0">
+    <div class="wrap">
+      <div class="dl">
+        <img src="assets/logo.svg" alt="LexAI" />
+        <h2>Hemen indir, çift tıkla kur</h2>
+        <p class="sub" style="margin:0 auto">Windows 10/11 (x64) · NVIDIA GPU + güncel sürücü · ~6 GB boş disk gerekir.</p>
+        <div class="cta" style="justify-content:center;margin-top:22px">
+          <a class="btn primary" href="https://drive.google.com/uc?export=download&id=16VA4ngDw5SGiq6EHNNEYiLUVHTDXqFFo">⬇ LexAI v0.9.0 (beta) indir</a>
+          <a class="btn ghost" href="https://github.com/LordOfTheMachines/lexai/releases">Sürümler</a>
+        </div>
+        <div class="opt">
+          <span><b>LexAI_0.9.0_x64-setup.exe</b> (~2.9 GB) — tek installer, her şey içinde, kendini günceller</span>
+        </div>
+        <p class="req">"Bilinmeyen yayıncı" uyarısında <b>Daha fazla bilgi → Yine de çalıştır</b> · İndirip kurarak <a href="https://github.com/LordOfTheMachines/lexai/blob/main/LICENSE">Kullanım Sözleşmesi'ni (EULA)</a> kabul edersiniz · yazılım "olduğu gibi" sunulur.</p>
+      </div>
+      <div class="note">
+        <b>Bağımsızlık notu:</b> LexAI bağımsız, üçüncü taraf bir uygulamadır; <b>T.C. Adalet Bakanlığı (UYAP)</b> veya
+        başka bir resmî kurumla bağlantısı, ortaklığı ya da onayı yoktur. "UYAP", "UDF", "e-Adalet" ve anılan diğer
+        ürün/marka adları yalnızca uyumluluğu açıklamak için kullanılmıştır ve ilgili sahiplerine aittir.
+      </div>
+    </div>
+  </section>
+
+  <!-- İLETİŞİM -->
+  <section id="iletisim" style="padding-top:0">
+    <div class="wrap">
+      <p class="eyebrow">İletişim</p>
+      <h2>Lisans, soru ve öneriler için</h2>
+      <p class="sub"><b>GilTec</b> · lisans kodunuzla birlikte bize ulaşın.</p>
+      <div class="contact">
+        <a class="cc" href="mailto:gilikmehmet@gmail.com">
+          <span class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <span><b>E-POSTA</b><span class="v">gilikmehmet@gmail.com</span></span>
+        </a>
+        <a class="cc" href="https://giltec.com.tr">
+          <span class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span>
+          <span><b>WEB</b><span class="v">giltec.com.tr</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>© LexAI · <b>GilTec</b> · Bağımsız uygulama · Kaynak kod ayrı tutulur, bu site yalnız dağıtım içindir.</span>
+      <span>
+        <a href="mailto:gilikmehmet@gmail.com">gilikmehmet@gmail.com</a> ·
+        <a href="https://giltec.com.tr">giltec.com.tr</a> ·
+        <a href="https://github.com/LordOfTheMachines/lexai">GitHub</a> ·
+        <a href="https://github.com/LordOfTheMachines/lexai/blob/main/LICENSE">Lisans</a>
+      </span>
+    </div>
+  </footer>
+</body>
+</html>
