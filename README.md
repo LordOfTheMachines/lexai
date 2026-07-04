@@ -6,7 +6,7 @@
 UYAP UDF · PDF · Görsel · Office · dijital + tarama · yan-yana inceleme · konumlu render
 
 [![İndir](https://img.shields.io/badge/İndir-Kay%C4%B1t%20ol%20%26%20indir-162F82?style=for-the-badge)](https://hukuk.giltec.com.tr/)
-[![Sürüm](https://img.shields.io/badge/s%C3%BCr%C3%BCm-0.9.9%20beta-EE862B?style=for-the-badge)](https://hukuk.giltec.com.tr/)
+[![Sürüm](https://img.shields.io/badge/s%C3%BCr%C3%BCm-0.9.11%20beta-EE862B?style=for-the-badge)](https://hukuk.giltec.com.tr/)
 ![Platform](https://img.shields.io/badge/Windows-10%2F11%20x64-5B6472?style=for-the-badge)
 ![Lisans](https://img.shields.io/badge/lisans-Tescilli%20(EULA)-5B6472?style=for-the-badge)
 
@@ -42,7 +42,7 @@ yapısı çıkarma ve orijinaline yakın konumlu render sunar. **Bilirkişiler, 
 ## Deneme sürümü / kurulum
 
 1. **[hukuk.giltec.com.tr](https://hukuk.giltec.com.tr/)** üzerinden kayıt olup **etkinleştirme anahtarınızı** alın (30 günlük deneme).
-2. `LexAI_0.9.9_x64-setup.exe` (~3.14 GB) installer'ını indirin ve çalıştırın. Windows "bilinmeyen yayıncı" derse: **Daha fazla bilgi → Yine de çalıştır** (installer imzasızdır; işlev etkilenmez).
+2. `LexAI_0.9.11_x64-setup.exe` (~3.14 GB) installer'ını indirin ve çalıştırın. Windows "bilinmeyen yayıncı" derse: **Daha fazla bilgi → Yine de çalıştır** (installer imzasızdır; işlev etkilenmez).
 3. Uygulamayı açın, **anahtarınızı girin** → deneme başlar (makinenize bağlanır). İlk açılışta TensorRT motoru GPU'nuza göre bir kez hazırlanır.
 4. Girdi klasörünü seçin → **Analiz Et** → inceleyin → **OCR Yap** (çıktı: metin + tablo + `.md`).
 
