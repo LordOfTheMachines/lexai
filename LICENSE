@@ -1,0 +1,123 @@
+LexAI — Son Kullanıcı Lisans Sözleşmesi (EULA)
+================================================
+
+Sürüm 1.1 · Yürürlük: 2026 · Telif Hakkı © GilTec (Mehmet Gilik). Tüm hakları saklıdır.
+
+ÖNEMLİ — LÜTFEN DİKKATLE OKUYUN. Bu Son Kullanıcı Lisans Sözleşmesi ("Sözleşme"), siz
+(gerçek veya tüzel kişi, "Kullanıcı") ile GilTec ("Lisans Veren") arasında, LexAI yazılımı,
+beraberindeki çalışma zamanı bileşenleri, modeller, dokümantasyon ve güncellemeler
+(topluca "Yazılım") için hukuki bir sözleşmedir. Yazılımı kurarak, kopyalayarak veya
+kullanarak bu Sözleşme'nin tüm şartlarını kabul etmiş sayılırsınız. Kabul etmiyorsanız
+Yazılımı kurmayın, kullanmayın ve tüm kopyalarını silin.
+
+Bu bir TESCİLLİ (proprietary) yazılım lisansıdır; açık kaynak DEĞİLDİR. Yazılım satılmaz,
+yalnızca aşağıdaki şartlarla KULLANIMINA izin verilir.
+
+---
+
+1. TANIMLAR
+   1.1 "Deneme (Trial)" — Yazılımın zaman sınırlı, değerlendirme amaçlı sürümü.
+   1.2 "Lisans Anahtarı" — Lisans Veren'in kayıt sonrası verdiği benzersiz etkinleştirme kodu.
+   1.3 "Cihaz" — Yazılımın etkinleştirildiği tekil bilgisayar (donanım kimliğiyle bağlanır).
+   1.4 "Abonelik" — Süreli, yenilenebilir tam kullanım hakkı (varsa).
+
+2. LİSANS HAKKI (GRANT)
+   Lisans Veren, işbu Sözleşme'ye uymanız kaydıyla size; devredilemez, münhasır olmayan,
+   alt-lisanslanamaz ve geri alınabilir bir hakla, Yazılımı YALNIZCA lisanslandığınız Cihaz'da
+   ve Deneme/Abonelik süresi boyunca, iç/mesleki amaçlarınız için KULLANMA hakkı verir.
+   Lisans Cihaz'a bağlıdır (bkz. §6). Yazılım üzerinde hiçbir mülkiyet hakkı devredilmez.
+
+3. DENEME SÜRÜMÜ
+   3.1 Deneme, etkinleştirme anından itibaren belirtilen süre (varsayılan otuz (30) gün) boyunca
+       geçerlidir. Süre dolduğunda Yazılım çalışmayı durdurur.
+   3.2 Her Lisans Anahtarı bir (1) Cihaz'a bağlanır; Deneme kötüye kullanımı (çok sayıda yeniden
+       kayıt, anahtar paylaşımı, süre sıfırlama girişimi) yasaktır.
+   3.3 Lisans Veren, Deneme'yi dilediği zaman uzatabilir, kısaltabilir veya sonlandırabilir.
+
+4. KISITLAMALAR
+   Yürürlükteki emredici hukukun izin verdiği ölçü haricinde şunları YAPAMAZSINIZ:
+   (a) Yazılımı tersine mühendislik yapmak, kaynağına dönüştürmek (decompile/disassemble),
+       değiştirmek veya türev eser oluşturmak;
+   (b) Yazılımı kiralamak, ödünç vermek, satmak, dağıtmak, yayınlamak, barındırmak (hosting),
+       zaman-paylaşımı veya hizmet-bürosu olarak üçüncü kişilere sunmak;
+   (c) Lisans Anahtarı'nı, kopya-koruma, lisans doğrulama veya Cihaz-bağlama mekanizmalarını
+       atlatmak, devre dışı bırakmak veya paylaşmak;
+   (d) Telif, marka veya mülkiyet bildirimlerini kaldırmak/değiştirmek;
+   (e) Yazılımı hukuka aykırı amaçlarla veya izin verilen kapsam dışında kullanmak.
+
+5. MÜLKİYET VE FİKRİ HAKLAR
+   Yazılım ve tüm kopyaları, ilgili tüm fikri mülkiyet hakları (telif, marka, ticari sır,
+   modeller, tasarım) Lisans Veren'e ve/veya lisans sağlayıcılarına aittir ve öyle kalır.
+   "LexAI" ve "GilTec" ile ilgili logolar Lisans Veren'in markalarıdır; bu Sözleşme size
+   bunları kullanma hakkı vermez.
+
+6. KOPYA KORUMASI VE ETKİNLEŞTİRME
+   Yazılım, Cihaz'a özgü, geri döndürülemez bir donanım kimliği özeti (HKLM MachineGuid'in
+   SHA-256'sı) üretir ve lisansı bu Cihaz'a bağlar. Etkinleştirme ve düzenli lisans doğrulaması
+   için internet bağlantısı gerekir (çevrimdışı sınırlı bir süre tolerans tanınır). Lisans
+   Veren, ihlal veya kötüye kullanım halinde lisansı uzaktan iptal edebilir (kill-switch),
+   bu durumda Yazılım en geç birkaç dakika içinde çalışmayı durdurur.
+
+7. VERİ, GİZLİLİK VE KVKK
+   7.1 İşlediğiniz belgeler CİHAZINIZDAN ÇIKMAZ; tüm OCR/analiz işlemleri yereldedir. Belge
+       içeriği Lisans Veren'e veya üçüncü kişilere İLETİLMEZ.
+   7.2 Yazılım yalnızca lisans doğrulama, güncelleme ve temel kullanım telemetrisi amacıyla
+       sınırlı teknik veri iletir: Cihaz kimlik özeti, bilgisayar/kullanıcı adı, sürüm, ilk/son
+       çalıştırma zamanı, açılış sayısı. Kayıt sırasında verdiğiniz iletişim bilgileri (ad,
+       e-posta, telefon, firma) lisans yönetimi için işlenir.
+   7.3 Bu veriler 6698 sayılı KVKK kapsamında, ilgili aydınlatma metni ve açık rızanıza dayanarak
+       işlenir. Ayrıntılar için Gizlilik Politikası'na bakınız.
+
+8. ÜÇÜNCÜ TARAF BİLEŞENLERİ VE AÇIK KAYNAK ATIFLARI
+   Yazılım, üçüncü taraf açık kaynak ve yeniden dağıtılabilir bileşenler içerir; başlıcaları:
+   (a) **PaddleOCR** (PP-OCRv5 ve PP-DocLayout modelleri), **PaddlePaddle**, **PaddleX**, **OpenCV**,
+       **ONNX**, **RapidOCR** — Apache License 2.0, © PaddlePaddle Authors ve ilgili katkıcılar;
+   (b) **ONNX Runtime** (Microsoft) — MIT; **FastAPI, Starlette, Uvicorn, Pydantic, NumPy, Pillow,
+       openpyxl, python-docx, zeyrek** — MIT/BSD/benzeri izinli lisanslar;
+   (c) **PyMuPDF** (Artifex/MuPDF) — GNU AGPL-3.0 veya ticari lisans;
+   (d) **NVIDIA CUDA®, cuDNN, TensorRT™** — NVIDIA yeniden dağıtım şartları (yalnız Yazılım ile birlikte);
+   (e) yazı tipleri (**Oxanium, Space Mono**) — SIL Open Font License 1.1.
+   Her bileşen kendi lisans şartlarına tabidir ve söz konusu şartlar, ilgili bileşen bakımından işbu
+   Sözleşme'ye göre önceliklidir. Tam atıf ve lisans metinleri, dağıtımla birlikte sunulan
+   THIRD_PARTY_NOTICES belgesinde yer alır. LexAI; PaddlePaddle, Baidu, NVIDIA, Microsoft, Artifex veya
+   anılan diğer projelerle bağlantılı ya da onlar tarafından onaylanmış DEĞİLDİR.
+
+9. GARANTİ REDDİ
+   YAZILIM "OLDUĞU GİBİ" VE "MEVCUT HALİYLE" SUNULUR. LİSANS VEREN, TİCARETE ELVERİŞLİLİK,
+   BELİRLİ BİR AMACA UYGUNLUK VE İHLAL ETMEME dâhil açık veya zımni HİÇBİR GARANTİ VERMEZ.
+   OCR VE ANALİZ SONUÇLARININ DOĞRULUĞU, EKSİKSİZLİĞİ VEYA BELİRLİ BİR AMACA UYGUNLUĞU
+   GARANTİ EDİLMEZ.
+
+10. ADLİ / MESLEKİ KULLANIM UYARISI
+    Yazılım bir yardımcı araçtır; hukuki, adli veya bilirkişi değerlendirmesinin yerine geçmez.
+    OCR/çıkarım çıktıları hata içerebilir. Çıktıların doğruluğunu orijinal belgeyle karşılaştırıp
+    DOĞRULAMAK ve nihai mesleki kanaate varmak Kullanıcı'nın sorumluluğundadır. Yazılım çıktısına
+    dayanılarak alınan kararlardan Lisans Veren sorumlu tutulamaz.
+
+11. SORUMLULUĞUN SINIRLANDIRILMASI
+    Yürürlükteki hukukun izin verdiği azami ölçüde, Lisans Veren; kâr kaybı, veri kaybı, iş
+    kesintisi veya dolaylı, arızi, özel ya da netice kabilinden zararlardan sorumlu değildir.
+    Lisans Veren'in her hâlükârda toplam sorumluluğu, talebe konu on iki (12) ay içinde Yazılım
+    için fiilen ödediğiniz bedeli (Deneme'de sıfır) aşamaz.
+
+12. SÜRE VE FESİH
+    Sözleşme, Yazılımı ilk kullandığınızda başlar. Şartlardan herhangi birini ihlal etmeniz
+    hâlinde lisansınız kendiliğinden ve bildirimsiz sona erer. Fesihte Yazılımı kullanmayı
+    durdurup tüm kopyalarını silmelisiniz. Niteliği gereği kalıcı hükümler (5, 9, 11, 13) fesihten
+    sonra da yürürlükte kalır.
+
+13. UYGULANACAK HUKUK VE YETKİ
+    Bu Sözleşme Türkiye Cumhuriyeti hukukuna tabidir. Uyuşmazlıklarda Lisans Veren'in yerleşim
+    yerindeki Türkiye mahkemeleri ve icra daireleri yetkilidir.
+
+14. GENEL HÜKÜMLER
+    Bu Sözleşme taraflar arasındaki tam mutabakattır. Herhangi bir hükmün geçersizliği diğer
+    hükümleri etkilemez. Lisans Veren bu Sözleşme'yi güncelleyebilir; güncel sürüm dağıtım
+    kanallarında yayımlanır. Haklarınızı Lisans Veren'in yazılı onayı olmadan devredemezsiniz.
+
+---
+
+İletişim: GilTec · Mehmet Gilik · gilikmehmet@gmail.com · https://giltec.com.tr
+
+Not: İşbu metin bir hukuki danışmanlık ürünü değildir; yayımdan önce Türk hukukunda yetkin
+bir avukat tarafından gözden geçirilmesi önerilir.

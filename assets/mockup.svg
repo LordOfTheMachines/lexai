@@ -1,0 +1,143 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 630" width="1000" height="630" role="img" aria-label="LexAI yan-yana inceleme ekranı — solda orijinal + tespit, sağda konumlu render">
+  <defs>
+    <clipPath id="win"><rect x="1" y="1" width="998" height="628" rx="14"/></clipPath>
+    <g id="eye">
+      <rect width="24" height="24" rx="5" fill="#EE862B"/>
+      <path d="M4.5,12 Q12,6.6 19.5,12 Q12,17.4 4.5,12 Z" fill="none" stroke="#fff" stroke-width="1.7"/>
+      <circle cx="12" cy="12" r="3" fill="#fff"/><circle cx="12" cy="12" r="1.3" fill="#EE862B"/>
+    </g>
+  </defs>
+
+  <g clip-path="url(#win)">
+    <rect x="1" y="1" width="998" height="628" fill="#15181a"/>
+
+    <!-- ===== titlebar ===== -->
+    <rect x="1" y="1" width="998" height="36" fill="#0f1214"/>
+    <use href="#eye" transform="translate(16,7) scale(.9)"/>
+    <text x="46" y="24" font-family="Segoe UI,sans-serif" font-size="13" fill="#cfd6d5" font-weight="600">LexAI OCR</text>
+    <g fill="none" stroke="#7b8788" stroke-width="1.4">
+      <line x1="922" y1="19" x2="934" y2="19"/>
+      <rect x="950" y="13" width="12" height="12" rx="2"/>
+      <line x1="978" y1="13" x2="990" y2="25"/><line x1="990" y1="13" x2="978" y2="25"/>
+    </g>
+
+    <!-- ===== sidebar ===== -->
+    <rect x="1" y="37" width="249" height="592" fill="#1d2123"/>
+    <line x1="250" y1="37" x2="250" y2="629" stroke="#2c3336"/>
+    <!-- brand -->
+    <use href="#eye" transform="translate(18,50)"/>
+    <text x="50" y="68" font-family="Oxanium,Segoe UI,sans-serif" font-size="19" font-weight="800" fill="#4ec4b5">LEXAI<tspan fill="#e7eae9" font-weight="600"> OCR</tspan></text>
+    <rect x="214" y="50" width="24" height="24" rx="6" fill="#262b2e"/><text x="221" y="67" font-size="12" fill="#95a3a3">⚙</text>
+
+    <!-- girdi -->
+    <text x="18" y="104" font-family="Segoe UI" font-size="9" letter-spacing="1.2" fill="#95a3a3">GİRDİ KLASÖRÜ</text>
+    <rect x="18" y="110" width="188" height="28" rx="7" fill="#101315" stroke="#2c3336"/>
+    <text x="28" y="128" font-size="10.5" fill="#6f7b7b" font-family="Consolas,monospace">…\Dava_Dosyalari</text>
+    <rect x="212" y="110" width="26" height="28" rx="7" fill="#262b2e"/><text x="219" y="129" font-size="12">📁</text>
+    <!-- çıktı -->
+    <text x="18" y="158" font-family="Segoe UI" font-size="9" letter-spacing="1.2" fill="#95a3a3">ÇIKTI KLASÖRÜ</text>
+    <rect x="18" y="164" width="188" height="28" rx="7" fill="#101315" stroke="#2c3336"/>
+    <text x="28" y="182" font-size="10.5" fill="#6f7b7b" font-family="Consolas,monospace">…\LexAI_Cikti</text>
+    <rect x="212" y="164" width="26" height="28" rx="7" fill="#262b2e"/><text x="219" y="183" font-size="12">💾</text>
+
+    <!-- türler -->
+    <text x="18" y="212" font-family="Segoe UI" font-size="9" letter-spacing="1.2" fill="#95a3a3">İŞLENECEK TÜRLER</text>
+    <g font-family="Segoe UI" font-size="11.5" font-weight="600" fill="#4ec4b5">
+      <rect x="18" y="218" width="105" height="30" rx="8" fill="rgba(78,196,181,.14)" stroke="rgba(78,196,181,.45)"/><text x="32" y="237">☑ PDF</text>
+      <rect x="133" y="218" width="105" height="30" rx="8" fill="rgba(78,196,181,.14)" stroke="rgba(78,196,181,.45)"/><text x="147" y="237">☑ UDF</text>
+      <rect x="18" y="253" width="105" height="30" rx="8" fill="rgba(78,196,181,.14)" stroke="rgba(78,196,181,.45)"/><text x="32" y="272">☑ Görsel</text>
+      <rect x="133" y="253" width="105" height="30" rx="8" fill="rgba(78,196,181,.14)" stroke="rgba(78,196,181,.45)"/><text x="147" y="272">☑ Office</text>
+    </g>
+
+    <!-- mod -->
+    <text x="18" y="312" font-family="Segoe UI" font-size="10" fill="#95a3a3">Mod:</text>
+    <text x="18" y="330" font-family="Oxanium,Segoe UI" font-size="14" font-weight="700" fill="#4ec4b5">İnceleme (ABBYY)</text>
+    <text x="18" y="345" font-family="Segoe UI" font-size="9.5" font-style="italic" fill="#6f7b7b">yön+alan düzelt → onayla → OCR</text>
+
+    <!-- analiz et -->
+    <rect x="18" y="366" width="220" height="46" rx="11" fill="#4ec4b5"/>
+    <text x="128" y="395" text-anchor="middle" font-family="Oxanium,Segoe UI" font-size="16" font-weight="800" fill="#06231f">▶ ANALİZ ET</text>
+
+    <!-- foot -->
+    <text x="128" y="576" text-anchor="middle" font-family="Segoe UI" font-size="9.5" fill="#6f7b7b">Native C++ TensorRT · Python servis</text>
+    <g transform="translate(92,588)">
+      <path d="M11,1 L20,6.5 L20,17.5 L11,23 L2,17.5 L2,6.5 Z" fill="none" stroke="#4b6bd6" stroke-width="2"/>
+      <circle cx="11" cy="12" r="2.4" fill="#4b6bd6"/>
+      <text x="30" y="10" font-family="Oxanium,Segoe UI" font-size="13" font-weight="800" fill="#e7eae9">GilTec</text>
+      <text x="30" y="21" font-family="Consolas,monospace" font-size="8" letter-spacing="1.5" fill="#4b6bd6">HUKUK</text>
+    </g>
+
+    <!-- ===== main toolbar ===== -->
+    <rect x="262" y="47" width="110" height="22" rx="11" fill="rgba(238,134,43,.16)" stroke="rgba(238,134,43,.5)"/>
+    <text x="276" y="62" font-family="Segoe UI" font-size="11" font-weight="700" fill="#EE862B">● OCR · karma</text>
+    <text x="384" y="62" font-family="Consolas,monospace" font-size="11" fill="#95a3a3">2026-1234E_bilirkisi_raporu.pdf</text>
+    <text x="726" y="62" font-family="Segoe UI" font-size="11" fill="#95a3a3">sayfa 12 / 47</text>
+    <rect x="884" y="46" width="104" height="26" rx="8" fill="#4ec4b5"/>
+    <text x="936" y="63" text-anchor="middle" font-family="Segoe UI" font-size="12" font-weight="700" fill="#06231f">✓ OCR Yap</text>
+
+    <!-- pane labels -->
+    <text x="272" y="92" font-family="Consolas,monospace" font-size="10" letter-spacing="1" fill="#6f7b7b">ORİJİNAL · TESPİT</text>
+    <text x="642" y="92" font-family="Consolas,monospace" font-size="10" letter-spacing="1" fill="#6f7b7b">KONUMLU RENDER</text>
+
+    <!-- ===== LEFT pane: original + detection ===== -->
+    <rect x="262" y="100" width="356" height="512" rx="10" fill="#0c0e10"/>
+    <rect x="290" y="114" width="300" height="484" rx="3" fill="#ffffff"/>
+    <text x="440" y="150" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#1b1f26">BİLİRKİŞİ RAPORU</text>
+    <text x="440" y="170" text-anchor="middle" font-family="Georgia,serif" font-size="9.5" fill="#555">Dosya No: 2026/1234 E.  ·  Sayfa 12</text>
+    <g fill="#c9ccd2">
+      <rect x="308" y="188" width="264" height="6" rx="3"/><rect x="308" y="200" width="248" height="6" rx="3"/>
+      <rect x="308" y="212" width="258" height="6" rx="3"/><rect x="308" y="224" width="180" height="6" rx="3"/>
+    </g>
+    <g fill="#c9ccd2">
+      <rect x="308" y="256" width="230" height="6" rx="3"/><rect x="308" y="268" width="262" height="6" rx="3"/>
+      <rect x="308" y="280" width="210" height="6" rx="3"/>
+    </g>
+    <!-- scanned table region -->
+    <g stroke="#b9bcc4" stroke-width="1" fill="none">
+      <rect x="308" y="318" width="264" height="150"/>
+      <line x1="308" y1="344" x2="572" y2="344"/><line x1="308" y1="370" x2="572" y2="370"/>
+      <line x1="308" y1="396" x2="572" y2="396"/><line x1="308" y1="422" x2="572" y2="422"/><line x1="308" y1="448" x2="572" y2="448"/>
+      <line x1="470" y1="318" x2="470" y2="468"/>
+    </g>
+    <g fill="#b7bac1"><rect x="316" y="329" width="70" height="5" rx="2"/><rect x="316" y="355" width="90" height="5" rx="2"/><rect x="316" y="381" width="60" height="5" rx="2"/><rect x="316" y="407" width="84" height="5" rx="2"/><rect x="316" y="433" width="72" height="5" rx="2"/><rect x="316" y="455" width="66" height="5" rx="2"/>
+      <rect x="478" y="329" width="50" height="5" rx="2"/><rect x="478" y="355" width="56" height="5" rx="2"/><rect x="478" y="381" width="46" height="5" rx="2"/><rect x="478" y="407" width="54" height="5" rx="2"/><rect x="478" y="433" width="50" height="5" rx="2"/><rect x="478" y="455" width="58" height="5" rx="2"/></g>
+    <g fill="#c9ccd2"><rect x="308" y="500" width="200" height="6" rx="3"/><rect x="308" y="512" width="240" height="6" rx="3"/></g>
+    <!-- DETECTION overlays -->
+    <g fill="none" stroke-width="1.6">
+      <rect x="332" y="138" width="216" height="20" rx="2" stroke="#4ec4b5" opacity=".85"/>
+      <rect x="302" y="182" width="278" height="52" rx="2" stroke="#4ec4b5" opacity=".7" fill="rgba(78,196,181,.06)"/>
+      <rect x="302" y="250" width="278" height="40" rx="2" stroke="#4ec4b5" opacity=".7" fill="rgba(78,196,181,.06)"/>
+      <rect x="304" y="314" width="272" height="158" rx="2" stroke="#EE862B" opacity=".85" fill="rgba(238,134,43,.05)"/>
+      <rect x="302" y="496" width="252" height="26" rx="2" stroke="#4ec4b5" opacity=".7"/>
+    </g>
+    <rect x="304" y="304" width="46" height="12" rx="2" fill="#EE862B"/><text x="309" y="313" font-family="Consolas,monospace" font-size="8" fill="#1b1f26" font-weight="700">TABLO</text>
+
+    <!-- ===== RIGHT pane: positioned render ===== -->
+    <rect x="632" y="100" width="356" height="512" rx="10" fill="#0c0e10"/>
+    <rect x="660" y="114" width="300" height="484" rx="3" fill="#ffffff"/>
+    <text x="810" y="150" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#14181f">BİLİRKİŞİ RAPORU</text>
+    <text x="810" y="170" text-anchor="middle" font-family="Georgia,serif" font-size="9.5" fill="#3a3f47">Dosya No: 2026/1234 E.  ·  Sayfa 12</text>
+    <g fill="#20242b"><rect x="678" y="188" width="264" height="5.5" rx="2.7"/><rect x="678" y="200" width="248" height="5.5" rx="2.7"/><rect x="678" y="212" width="258" height="5.5" rx="2.7"/><rect x="678" y="224" width="180" height="5.5" rx="2.7"/></g>
+    <text x="678" y="248" font-family="Georgia,serif" font-size="10" font-weight="700" fill="#14181f">A. Hasar Kalemleri</text>
+    <g fill="#20242b"><rect x="678" y="258" width="230" height="5.5" rx="2.7"/><rect x="678" y="270" width="262" height="5.5" rx="2.7"/><rect x="678" y="282" width="210" height="5.5" rx="2.7"/></g>
+    <!-- reconstructed table -->
+    <g font-family="Segoe UI,sans-serif">
+      <rect x="678" y="316" width="264" height="26" fill="#eef3f2"/>
+      <rect x="678" y="316" width="264" height="152" fill="none" stroke="#c2c6cc"/>
+      <line x1="678" y1="342" x2="942" y2="342" stroke="#c2c6cc"/><line x1="678" y1="368" x2="942" y2="368" stroke="#e2e5ea"/>
+      <line x1="678" y1="392" x2="942" y2="392" stroke="#e2e5ea"/><line x1="678" y1="416" x2="942" y2="416" stroke="#e2e5ea"/>
+      <line x1="678" y1="440" x2="942" y2="440" stroke="#c2c6cc"/>
+      <line x1="838" y1="316" x2="838" y2="468" stroke="#c2c6cc"/>
+      <text x="686" y="333" font-size="10" font-weight="700" fill="#14181f">Kalem</text><text x="934" y="333" text-anchor="end" font-size="10" font-weight="700" fill="#14181f">Tutar (₺)</text>
+      <g font-size="9.5" fill="#20242b"><text x="686" y="359">Hasar bedeli</text><text x="934" y="359" text-anchor="end">24.500,00</text>
+        <text x="686" y="384">İşçilik</text><text x="934" y="384" text-anchor="end">3.200,00</text>
+        <text x="686" y="408">Yedek parça</text><text x="934" y="408" text-anchor="end">1.210,00</text>
+        <text x="686" y="432">KDV %20</text><text x="934" y="432" text-anchor="end">5.782,00</text></g>
+      <text x="686" y="458" font-size="10" font-weight="700" fill="#14181f">TOPLAM</text><text x="934" y="458" text-anchor="end" font-size="10" font-weight="700" fill="#14181f">34.692,00</text>
+    </g>
+    <g fill="#20242b"><rect x="678" y="500" width="200" height="5.5" rx="2.7"/><rect x="678" y="512" width="240" height="5.5" rx="2.7"/></g>
+    <rect x="878" y="560" width="70" height="22" rx="6" fill="rgba(78,196,181,.14)" stroke="rgba(78,196,181,.4)"/>
+    <text x="913" y="575" text-anchor="middle" font-family="Consolas,monospace" font-size="10" fill="#4ec4b5">.md ✓</text>
+  </g>
+  <rect x="1" y="1" width="998" height="628" rx="14" fill="none" stroke="#2c3336"/>
+</svg>

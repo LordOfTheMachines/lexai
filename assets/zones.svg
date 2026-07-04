@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 540" width="760" height="540" role="img" aria-label="Alan (zone) düzenleyici — yön ve alan tespiti/düzeltme">
+  <rect x="1" y="1" width="758" height="538" rx="12" fill="#12151a" stroke="#2c3336"/>
+  <!-- toolbar -->
+  <rect x="1" y="1" width="758" height="46" rx="12" fill="#151a1e"/>
+  <rect x="1" y="34" width="758" height="13" fill="#151a1e"/>
+  <text x="18" y="30" font-family="Oxanium,Segoe UI" font-size="13" font-weight="800" fill="#4ec4b5">◱ ALAN DÜZENLEYİCİ</text>
+  <g font-family="Segoe UI" font-size="10.5" font-weight="600">
+    <rect x="188" y="13" width="66" height="22" rx="6" fill="rgba(78,196,181,.16)" stroke="rgba(78,196,181,.5)"/><circle cx="200" cy="24" r="4" fill="#4ec4b5"/><text x="209" y="28" fill="#4ec4b5">Metin</text>
+    <rect x="260" y="13" width="66" height="22" rx="6" fill="rgba(238,134,43,.16)" stroke="rgba(238,134,43,.5)"/><circle cx="272" cy="24" r="4" fill="#EE862B"/><text x="281" y="28" fill="#EE862B">Tablo</text>
+    <rect x="332" y="13" width="66" height="22" rx="6" fill="rgba(155,140,255,.16)" stroke="rgba(155,140,255,.5)"/><circle cx="344" cy="24" r="4" fill="#9b8cff"/><text x="353" y="28" fill="#9b8cff">Figür</text>
+    <rect x="404" y="13" width="72" height="22" rx="6" fill="rgba(226,89,106,.16)" stroke="rgba(226,89,106,.5)"/><circle cx="416" cy="24" r="4" fill="#e2596a"/><text x="425" y="28" fill="#e2596a">Mühür</text>
+  </g>
+  <text x="556" y="28" font-family="Consolas,monospace" font-size="11" fill="#95a3a3">⟲ 0°</text>
+  <rect x="600" y="12" width="146" height="24" rx="7" fill="#4ec4b5"/><text x="673" y="28" text-anchor="middle" font-family="Segoe UI" font-size="11.5" font-weight="700" fill="#06231f">OCR'a geç →</text>
+
+  <!-- canvas -->
+  <rect x="1" y="47" width="758" height="492" fill="#0c0e10"/>
+  <rect x="170" y="66" width="420" height="456" rx="3" fill="#ffffff"/>
+  <!-- doc content (fabricated) -->
+  <text x="380" y="102" text-anchor="middle" font-family="Georgia,serif" font-size="15" font-weight="700" fill="#1b1f26">KEŞİF TUTANAĞI</text>
+  <text x="380" y="120" text-anchor="middle" font-family="Georgia,serif" font-size="9.5" fill="#555">Esas No: 2026/1234  ·  Keşif Tarihi: 14.03.2026</text>
+  <g fill="#c9ccd2"><rect x="196" y="138" width="368" height="6" rx="3"/><rect x="196" y="150" width="352" height="6" rx="3"/><rect x="196" y="162" width="360" height="6" rx="3"/><rect x="196" y="174" width="300" height="6" rx="3"/></g>
+  <g fill="#c9ccd2"><rect x="196" y="206" width="360" height="6" rx="3"/><rect x="196" y="218" width="330" height="6" rx="3"/></g>
+  <!-- table region -->
+  <g stroke="#b9bcc4" stroke-width="1" fill="none"><rect x="196" y="250" width="368" height="118"/><line x1="196" y1="276" x2="564" y2="276"/><line x1="196" y1="304" x2="564" y2="304"/><line x1="196" y1="332" x2="564" y2="332"/><line x1="380" y1="250" x2="380" y2="368"/></g>
+  <g fill="#b7bac1"><rect x="206" y="260" width="90" height="5" rx="2"/><rect x="206" y="288" width="70" height="5" rx="2"/><rect x="206" y="316" width="84" height="5" rx="2"/><rect x="206" y="344" width="66" height="5" rx="2"/><rect x="392" y="260" width="60" height="5" rx="2"/><rect x="392" y="288" width="54" height="5" rx="2"/><rect x="392" y="316" width="58" height="5" rx="2"/><rect x="392" y="344" width="50" height="5" rx="2"/></g>
+  <!-- signature (imza) squiggle + stamp (mühür) -->
+  <path d="M210,470 q14,-22 26,-4 t26,-2 q10,-14 22,2" fill="none" stroke="#3a3f47" stroke-width="1.6"/>
+  <g transform="translate(500,462)"><circle r="30" fill="none" stroke="#9a3b3b" stroke-width="2.2" opacity=".7"/><circle r="22" fill="none" stroke="#9a3b3b" stroke-width="1" opacity=".6"/><text y="4" text-anchor="middle" font-family="Georgia,serif" font-size="8" fill="#9a3b3b" opacity=".75">T.C. · MAHKEME</text></g>
+
+  <!-- ZONE overlays -->
+  <g fill="none" stroke-width="1.8">
+    <rect x="188" y="90" width="384" height="94" rx="2" stroke="#4ec4b5" opacity=".85"/>
+    <rect x="188" y="200" width="384" height="30" rx="2" stroke="#4ec4b5" opacity=".85"/>
+    <!-- selected table zone (amber) with handles -->
+    <rect x="190" y="246" width="380" height="126" rx="2" stroke="#EE862B" opacity=".95"/>
+    <rect x="164" y="440" width="120" height="52" rx="2" stroke="#9b8cff" opacity=".85"/>
+    <rect x="466" y="428" width="70" height="70" rx="2" stroke="#e2596a" opacity=".85"/>
+  </g>
+  <!-- handles on table zone -->
+  <g fill="#EE862B"><rect x="186" y="242" width="8" height="8"/><rect x="566" y="242" width="8" height="8"/><rect x="186" y="368" width="8" height="8"/><rect x="566" y="368" width="8" height="8"/><rect x="376" y="242" width="8" height="8"/><rect x="376" y="368" width="8" height="8"/></g>
+  <!-- zone tags -->
+  <g font-family="Consolas,monospace" font-size="8.5" font-weight="700">
+    <rect x="188" y="79" width="42" height="12" fill="#4ec4b5"/><text x="193" y="88" fill="#06231f">Metin</text>
+    <rect x="190" y="234" width="42" height="12" fill="#EE862B"/><text x="195" y="243" fill="#1b1f26">Tablo</text>
+    <rect x="164" y="429" width="36" height="12" fill="#9b8cff"/><text x="169" y="438" fill="#12151a">İmza</text>
+    <rect x="466" y="416" width="46" height="12" fill="#e2596a"/><text x="471" y="425" fill="#fff">Mühür</text>
+  </g>
+</svg>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lordofthemachines.github.io/lexai/sitemap.xml
